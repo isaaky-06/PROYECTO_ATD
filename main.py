@@ -11,7 +11,7 @@ import csv
 # --- IMPORTACIÓN DE MÓDULOS ---
 try:
     # 1. Traemos la función falsa de Spotify
-    from spotify import obtener_artistas_favoritos
+    from artistas import obtener_artistas_favoritos
     # 2. Traemos TU función de conciertos (la que acabas de arreglar)
     from conciertos import obtener_primer_concierto
     # 3. Traemos TU función de vuelos (la de Kayak)
