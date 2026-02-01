@@ -15,7 +15,6 @@ def obtener_artistas_favoritos():
     """
     Obtiene una lista de artistas populares desde Last.fm API
     
-    Usa tu API key de Last.fm:
     Application name: SoundTrip
     API key: 2b181f36c98c423cb166f7b3c3a4aede
     
@@ -25,11 +24,10 @@ def obtener_artistas_favoritos():
     
     print("\n---- OBTENIENDO ARTISTAS DESDE LAST.FM ----")
     
-    # TU API KEY de Last.fm
+    # API KEY de Last.fm
     API_KEY = "2b181f36c98c423cb166f7b3c3a4aede"
     
-    # OPCION 1: Top artistas globales (Chart)
-    # Esto NO requiere usuario, solo API key
+    
     url = "http://ws.audioscrobbler.com/2.0/"
     
     params = {
@@ -40,13 +38,13 @@ def obtener_artistas_favoritos():
     }
     
     try:
-        # Peticion HTTP GET (Practica L3-L4)
+        # Peticion HTTP GET 
         print("Consultando Last.fm API...")
         respuesta = requests.get(url, params=params)
         
-        # Verificar codigo de estado (Practica L4)
+        # Verificar codigo de estado 
         if respuesta.status_code == 200:
-            # La API devuelve JSON (Practica L7)
+            # La API devuelve JSON 
             datos = respuesta.json()
             
             # Extraer nombres de artistas
